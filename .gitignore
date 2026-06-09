@@ -1,10 +1,48 @@
+# Dependencies
 node_modules
+jspm_packages
+
+# Build outputs
 dist
 dist-ssr
+out
+build
+.output
+
+# TypeScript / Vite cache
 *.tsbuildinfo
+.vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
 *.local
-.DS_Store
-server/storage
-.vercel
+
+# Logs and diagnostics
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Test / coverage output
 coverage
 playwright-report
+.nyc_output
+
+# Local app data
+server/storage
+
+# Platform / editor state
+.vercel
+.DS_Store
+.cache
+.parcel-cache
+.eslintcache
+.stylelintcache
+.node_repl_history
+.vscode-test
