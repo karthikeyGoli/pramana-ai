@@ -11,7 +11,7 @@ import Footer from '../components/Footer'
 export default function LandingPage() {
   return (
     <>
-      <Navbar />
+      <Navbar variant="dark" />
       <main>
         <Hero />
         <ProblemSection />

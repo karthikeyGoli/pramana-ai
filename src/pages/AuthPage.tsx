@@ -201,15 +201,18 @@ export default function AuthPage() {
   }
 
   return (
-    <main className="min-h-screen bg-hero-mesh px-6 py-8 text-ink">
+    <main className="relative min-h-screen overflow-hidden bg-forest-deep px-6 py-8 text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_12%,rgba(201,168,76,0.22),transparent_30%),radial-gradient(circle_at_80%_18%,rgba(46,125,82,0.26),transparent_26%),linear-gradient(135deg,#071710_0%,#0B2118_46%,#173C2B_100%)]" />
+      <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,.8)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.8)_1px,transparent_1px)] [background-size:44px_44px]" />
+      <div className="relative">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <Link to="/" className="inline-flex items-center gap-2.5">
           <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-forest text-gold">
             <Sparkles size={18} />
           </div>
-          <span className="font-display text-2xl font-semibold">Pramana AI</span>
+          <span className="font-display text-2xl font-semibold text-cream">Pramana AI</span>
         </Link>
-        <Link to="/" className="text-sm font-bold text-forest">
+        <Link to="/" className="text-sm font-bold text-gold">
           Back to site
         </Link>
       </div>
@@ -220,30 +223,41 @@ export default function AuthPage() {
           animate={{ opacity: 1, y: 0 }}
           className="pt-8"
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-forest/10 bg-white/70 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-forest">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-gold backdrop-blur-xl">
             <ShieldCheck size={14} />
             Private beta identity
           </span>
-          <h1 className="mt-6 max-w-2xl font-display text-5xl font-semibold leading-tight md:text-6xl">
+          <h1 className="mt-6 max-w-2xl font-display text-5xl font-semibold leading-tight text-cream md:text-6xl">
             Sign in to build your anti-fake body profile.
           </h1>
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-muted">
+          <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/70">
             A premium intake for product fit, routines, and wellness context. Pramana
             uses this to personalize future validation, not to diagnose or treat.
           </p>
 
           <div className="mt-8 grid gap-4">
             {fieldGroups.map((item) => (
-              <div key={item.title} className="flex gap-4 rounded-3xl border border-white/70 bg-white/75 p-4 shadow-soft">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-forest text-gold">
+              <div key={item.title} className="flex gap-4 rounded-3xl border border-white/10 bg-white/[0.08] p-4 shadow-soft backdrop-blur-xl">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gold text-forest">
                   <item.icon size={19} />
                 </div>
                 <div>
-                  <h2 className="font-display text-xl font-semibold">{item.title}</h2>
-                  <p className="mt-1 text-sm leading-6 text-ink-muted">{item.body}</p>
+                  <h2 className="font-display text-xl font-semibold text-cream">{item.title}</h2>
+                  <p className="mt-1 text-sm leading-6 text-white/62">{item.body}</p>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-8 rounded-[2rem] border border-gold/20 bg-gold/10 p-5">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">
+              Why we ask
+            </p>
+            <p className="mt-2 text-sm leading-6 text-white/70">
+              Skin, supplements, sleep, stress, and food are connected. The intake gives
+              Pramana enough context to warn gently and rank smarter, without storing
+              documents, exact DOB, wearable imports, or clinical records.
+            </p>
           </div>
         </motion.div>
 
@@ -251,7 +265,7 @@ export default function AuthPage() {
           initial={{ opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.08 }}
-          className="rounded-[2rem] border border-white/75 bg-white/90 p-4 shadow-pramana backdrop-blur-xl md:p-6"
+          className="rounded-[2rem] border border-white/75 bg-white/95 p-4 text-ink shadow-pramana backdrop-blur-xl md:p-6"
         >
           <div className="grid gap-3 rounded-3xl bg-cream p-2 sm:grid-cols-2">
             {(['signup', 'login'] as AuthMode[]).map((item) => (
@@ -446,6 +460,7 @@ export default function AuthPage() {
           </p>
         </motion.div>
       </section>
+      </div>
     </main>
   )
 }
