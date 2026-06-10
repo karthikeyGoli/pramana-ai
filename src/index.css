@@ -11,6 +11,11 @@
     @apply bg-cream font-sans text-ink antialiased;
   }
 
+  img {
+    outline: 1px solid rgba(255, 255, 255, 0.1);
+    outline-offset: -1px;
+  }
+
   ::selection {
     background-color: rgba(201, 168, 76, 0.32);
     color: #0b2118;
@@ -20,6 +25,14 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
   }
 
   .glass {
@@ -67,5 +80,36 @@
   .spotlight-card > * {
     position: relative;
     z-index: 1;
+  }
+
+  .premium-scrollbar {
+    scrollbar-color: rgba(201, 168, 76, 0.65) rgba(255, 255, 255, 0.08);
+    scrollbar-width: thin;
+  }
+
+  .premium-scrollbar::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+
+  .premium-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+  }
+
+  .premium-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(201, 168, 76, 0.65);
+    border-radius: 999px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

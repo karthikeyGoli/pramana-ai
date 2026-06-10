@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Brain, Home, ScanSearch, ShieldCheck, Sparkles, UserRound } from 'lucide-react'
 
@@ -11,6 +12,17 @@ const items = [
 ]
 
 export default function FloatingDock() {
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const updateVisibility = () => setVisible(window.scrollY > 520)
+    updateVisibility()
+    window.addEventListener('scroll', updateVisibility, { passive: true })
+    return () => window.removeEventListener('scroll', updateVisibility)
+  }, [])
+
+  if (!visible) return null
+
   return (
     <motion.nav
       initial={{ opacity: 0, y: 18 }}
