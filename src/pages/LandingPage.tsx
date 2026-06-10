@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import ProblemSection from '../components/ProblemSection'
@@ -11,6 +12,21 @@ import PointerGlow from '../components/PointerGlow'
 import FloatingDock from '../components/FloatingDock'
 
 export default function LandingPage() {
+  useEffect(() => {
+    const scrollToHash = () => {
+      const hash = window.location.hash
+      if (!hash) return
+
+      window.setTimeout(() => {
+        document.querySelector(hash)?.scrollIntoView({ block: 'start' })
+      }, 80)
+    }
+
+    scrollToHash()
+    window.addEventListener('hashchange', scrollToHash)
+    return () => window.removeEventListener('hashchange', scrollToHash)
+  }, [])
+
   return (
     <>
       <PointerGlow />

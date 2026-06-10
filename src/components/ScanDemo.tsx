@@ -49,7 +49,7 @@ export default function ScanDemo() {
   }
 
   return (
-    <div id="scanner" className="rounded-[2rem] border border-white/70 bg-white/90 p-4 shadow-pramana backdrop-blur-xl md:p-5">
+    <div className="rounded-[2rem] border border-white/70 bg-white/90 p-4 shadow-pramana backdrop-blur-xl md:p-5">
       <div className="flex items-center justify-between gap-3">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-forest-light">

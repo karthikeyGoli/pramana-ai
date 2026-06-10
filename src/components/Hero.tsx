@@ -48,6 +48,28 @@ const activity = [
   ['Action', 'Ask for lab proof before daily use'],
 ]
 
+const scanRailLeft = [
+  ['Ingredient clarity', 'Botanicals listed', 'verified'],
+  ['Seller signal', 'Batch QR missing', 'caution'],
+  ['Skin context', 'Dry scalp friendly', 'body fit'],
+  ['Evidence source', 'Needs lab citation', 'review'],
+  ['Routine impact', 'One product change', 'stable'],
+]
+
+const scanRailRight = [
+  ['Wearable sync', 'Sleep debt detected', 'context'],
+  ['Gut-skin axis', 'Food pattern logged', 'linked'],
+  ['Ayurveda lens', 'Dryness pattern', 'subtle'],
+  ['Doctor card', 'Export-safe wording', 'ready'],
+  ['Privacy lock', 'Consent event saved', 'private'],
+]
+
+const scannerStats = [
+  ['64', 'trust score'],
+  ['3', 'proof gaps'],
+  ['5', 'body links'],
+]
+
 export default function Hero() {
   return (
     <section className="premium-ambient premium-grain relative min-h-screen overflow-hidden text-white">
@@ -307,11 +329,90 @@ export default function Hero() {
               </div>
             </div>
           </div>
-
-          <div className="relative -mt-5 px-3 lg:-ml-8 lg:w-[430px]">
-            <ScanDemo />
-          </div>
         </motion.div>
+      </div>
+
+      <div id="scanner" className="relative mx-auto max-w-7xl scroll-mt-28 px-6 pb-20">
+        <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.035] px-5 py-8 shadow-pramana backdrop-blur-xl md:px-8 lg:py-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(201,168,76,0.18),transparent_36%),radial-gradient(circle_at_18%_72%,rgba(107,77,138,0.16),transparent_32%),radial-gradient(circle_at_86%_28%,rgba(94,138,114,0.16),transparent_30%)]" />
+          <div className="relative mb-7 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-bold uppercase text-gold">
+                <ScanSearch size={14} />
+                Live scanner theatre
+              </span>
+              <h2 className="mt-4 max-w-2xl font-display text-4xl font-normal leading-tight text-cream md:text-5xl">
+                Watch Pramana turn a product into proof, context, and action.
+              </h2>
+            </div>
+            <p className="max-w-md text-sm leading-6 text-white/62">
+              The side screens simulate the future app: evidence checks, body links,
+              wearable context, Ayurveda lens, and privacy-safe summaries moving around
+              the scan.
+            </p>
+          </div>
+
+          <div className="relative min-h-[620px] lg:min-h-[560px]">
+            <div className="pointer-events-none absolute left-0 top-0 hidden h-[520px] w-[245px] overflow-hidden rounded-[1.6rem] border border-white/10 bg-black/20 p-3 backdrop-blur-xl lg:block">
+              <motion.div
+                animate={{ y: ['0%', '-50%'] }}
+                transition={{ duration: 18, repeat: Infinity, ease: 'linear' }}
+                className="grid gap-3"
+              >
+                {[...scanRailLeft, ...scanRailLeft].map(([label, value, tag], index) => (
+                  <div
+                    key={`${label}-${index}`}
+                    className="rounded-2xl border border-white/10 bg-white/[0.08] p-4"
+                  >
+                    <div className="text-[10px] font-bold uppercase text-gold">{tag}</div>
+                    <div className="mt-2 text-sm font-bold text-white">{label}</div>
+                    <div className="mt-1 text-xs leading-5 text-white/58">{value}</div>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+
+            <div className="pointer-events-none absolute right-0 top-0 hidden h-[520px] w-[245px] overflow-hidden rounded-[1.6rem] border border-white/10 bg-black/20 p-3 backdrop-blur-xl lg:block">
+              <motion.div
+                animate={{ y: ['-50%', '0%'] }}
+                transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+                className="grid gap-3"
+              >
+                {[...scanRailRight, ...scanRailRight].map(([label, value, tag], index) => (
+                  <div
+                    key={`${label}-${index}`}
+                    className="rounded-2xl border border-white/10 bg-white/[0.08] p-4"
+                  >
+                    <div className="text-[10px] font-bold uppercase text-gold">{tag}</div>
+                    <div className="mt-2 text-sm font-bold text-white">{label}</div>
+                    <div className="mt-1 text-xs leading-5 text-white/58">{value}</div>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+
+            <motion.div
+              aria-hidden
+              animate={{ x: ['0%', '-50%'] }}
+              transition={{ duration: 28, repeat: Infinity, ease: 'linear' }}
+              className="pointer-events-none absolute bottom-0 left-0 hidden min-w-max gap-3 lg:flex"
+            >
+              {[...scannerStats, ...scannerStats, ...scannerStats].map(([value, label], index) => (
+                <div
+                  key={`${label}-${index}`}
+                  className="min-w-32 rounded-2xl border border-white/10 bg-white/[0.08] px-4 py-3 backdrop-blur-xl"
+                >
+                  <div className="font-display text-3xl text-gold">{value}</div>
+                  <div className="text-[10px] font-bold uppercase text-white/55">{label}</div>
+                </div>
+              ))}
+            </motion.div>
+
+            <div className="relative z-10 mx-auto max-w-[430px]">
+              <ScanDemo />
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="relative border-y border-white/10 bg-white/[0.06] px-6 py-5 backdrop-blur">
