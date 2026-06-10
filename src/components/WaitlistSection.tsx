@@ -33,8 +33,9 @@ export default function WaitlistSection() {
   }
 
   return (
-    <section id="waitlist" className="bg-forest px-6 py-24 text-white">
-      <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <section id="waitlist" className="premium-ambient premium-grain relative overflow-hidden px-6 py-24 text-white">
+      <div className="premium-vignette absolute inset-0" />
+      <div className="relative mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +45,7 @@ export default function WaitlistSection() {
             <ShieldCheck size={14} />
             Early access
           </span>
-          <h2 className="mt-6 font-display text-4xl font-semibold leading-tight md:text-5xl">
+          <h2 className="mt-6 font-display text-4xl font-normal leading-tight md:text-5xl">
             Help build the anti-fake body intelligence layer India deserves.
           </h2>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/70">

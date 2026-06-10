@@ -56,7 +56,7 @@ export default function ProblemSection() {
 
   return (
     <section id="problem" className="relative overflow-hidden bg-white py-24">
-      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#071710] to-transparent opacity-10" />
+      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#0d1210] to-transparent opacity-10" />
       <motion.div
         aria-hidden
         animate={{ x: ['0%', '-50%'] }}
@@ -84,7 +84,7 @@ export default function ProblemSection() {
             <Megaphone size={14} />
             You are not overthinking it
           </span>
-          <h2 className="mt-5 font-display text-4xl font-semibold text-ink md:text-6xl text-balance">
+          <h2 className="mt-5 font-display text-4xl font-normal text-ink md:text-6xl text-balance">
             The market learned your insecurities.
             <span className="block text-forest">Then sold them back to you.</span>
           </h2>
@@ -119,12 +119,13 @@ export default function ProblemSection() {
           ))}
         </div>
 
-        <div className="mt-16 grid gap-6 overflow-hidden rounded-[2rem] border border-forest/10 bg-forest text-white shadow-pramana lg:grid-cols-[0.92fr_1.08fr]">
-          <div className="p-8 md:p-10">
+        <div className="premium-ambient-soft relative mt-16 grid gap-6 overflow-hidden rounded-[2rem] border border-black/10 text-white shadow-pramana lg:grid-cols-[0.92fr_1.08fr]">
+          <div className="premium-vignette absolute inset-0" />
+          <div className="relative p-8 md:p-10">
             <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-gold">
               <ShieldQuestion size={24} />
             </div>
-            <h3 className="font-display text-3xl font-semibold md:text-4xl">
+            <h3 className="font-display text-3xl font-normal md:text-4xl">
               Pramana is not another recommendation engine.
             </h3>
             <p className="mt-4 leading-relaxed text-white/70">
@@ -156,8 +157,7 @@ export default function ProblemSection() {
             </a>
           </div>
 
-          <div className="relative min-h-[520px] bg-white/[0.07] p-6">
-            <div className="absolute inset-0 opacity-[0.1] [background-image:linear-gradient(rgba(255,255,255,.8)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.8)_1px,transparent_1px)] [background-size:36px_36px]" />
+          <div className="relative min-h-[520px] bg-white/[0.06] p-6">
             <AnimatePresence mode="wait">
               <motion.div
                 key={active.label}
@@ -173,7 +173,7 @@ export default function ProblemSection() {
                       <BadgeAlert size={14} />
                       market claim
                     </span>
-                    <h4 className="mt-4 font-display text-3xl font-semibold text-white">
+                    <h4 className="mt-4 font-display text-3xl font-normal text-white">
                       {active.claim}
                     </h4>
                   </div>
@@ -192,7 +192,7 @@ export default function ProblemSection() {
                         <p className="text-xs font-bold uppercase text-forest-light">
                           Pramana verdict
                         </p>
-                        <h5 className="font-display text-2xl font-semibold">
+                        <h5 className="font-display text-2xl font-normal">
                           {active.verdict}
                         </h5>
                       </div>

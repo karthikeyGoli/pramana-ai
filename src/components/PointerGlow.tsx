@@ -17,7 +17,7 @@ export default function PointerGlow() {
       aria-hidden="true"
       className="pointer-events-none fixed inset-0 z-[60] hidden mix-blend-screen md:block"
       style={{
-        background: `radial-gradient(360px circle at ${position.x}px ${position.y}px, rgba(201,168,76,0.18), rgba(46,125,82,0.08) 36%, transparent 68%)`,
+        background: `radial-gradient(360px circle at ${position.x}px ${position.y}px, rgba(201,168,76,0.16), rgba(107,77,138,0.08) 38%, transparent 70%)`,
       }}
     />
   )

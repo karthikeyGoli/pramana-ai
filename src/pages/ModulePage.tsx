@@ -20,10 +20,10 @@ export default function ModulePage() {
     <>
       <PointerGlow />
       <Navbar variant="dark" />
-      <main className="overflow-hidden bg-forest-deep text-white">
+      <main className="overflow-hidden bg-[#0d1210] text-white">
         <section className="relative min-h-screen px-6 pt-32">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_14%,rgba(201,168,76,0.22),transparent_30%),radial-gradient(circle_at_80%_12%,rgba(46,125,82,0.24),transparent_28%),linear-gradient(135deg,#071710_0%,#0B2118_48%,#173C2B_100%)]" />
-          <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,.8)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.8)_1px,transparent_1px)] [background-size:44px_44px]" />
+          <div className="premium-ambient premium-grain absolute inset-0" />
+          <div className="premium-vignette absolute inset-0" />
 
           <div className="relative mx-auto grid max-w-7xl gap-10 pb-24 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
             <motion.div
@@ -38,7 +38,7 @@ export default function ModulePage() {
                 <Icon size={15} />
                 {details.eyebrow}
               </div>
-              <h1 className="mt-6 max-w-3xl font-display text-5xl font-semibold leading-[0.98] text-cream md:text-7xl">
+              <h1 className="mt-6 max-w-3xl font-display text-5xl font-normal leading-[0.98] text-cream md:text-7xl">
                 {details.headline}
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
@@ -123,7 +123,7 @@ export default function ModulePage() {
               <span className="text-sm font-bold uppercase tracking-[0.2em] text-forest-light">
                 Premium v1 behavior
               </span>
-              <h2 className="mt-3 font-display text-4xl font-semibold">
+              <h2 className="mt-3 font-display text-4xl font-normal">
                 Built to feel interactive now, ready for real data later.
               </h2>
             </div>

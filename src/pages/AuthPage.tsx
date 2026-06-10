@@ -201,9 +201,8 @@ export default function AuthPage() {
   }
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-forest-deep px-6 py-8 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_12%,rgba(201,168,76,0.22),transparent_30%),radial-gradient(circle_at_80%_18%,rgba(46,125,82,0.26),transparent_26%),linear-gradient(135deg,#071710_0%,#0B2118_46%,#173C2B_100%)]" />
-      <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,.8)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.8)_1px,transparent_1px)] [background-size:44px_44px]" />
+    <main className="premium-ambient premium-grain relative min-h-screen overflow-hidden px-6 py-8 text-white">
+      <div className="premium-vignette absolute inset-0" />
       <div className="relative">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <Link to="/" className="inline-flex items-center gap-2.5">
@@ -227,7 +226,7 @@ export default function AuthPage() {
             <ShieldCheck size={14} />
             Private beta identity
           </span>
-          <h1 className="mt-6 max-w-2xl font-display text-5xl font-semibold leading-tight text-cream md:text-6xl">
+          <h1 className="mt-6 max-w-2xl font-display text-5xl font-normal leading-[1.02] text-cream md:text-6xl">
             Sign in to build your anti-fake body profile.
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/70">
@@ -242,7 +241,7 @@ export default function AuthPage() {
                   <item.icon size={19} />
                 </div>
                 <div>
-                  <h2 className="font-display text-xl font-semibold text-cream">{item.title}</h2>
+                  <h2 className="font-display text-xl font-normal text-cream">{item.title}</h2>
                   <p className="mt-1 text-sm leading-6 text-white/62">{item.body}</p>
                 </div>
               </div>
@@ -332,7 +331,7 @@ export default function AuthPage() {
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">Body intelligence intake</p>
-                  <h2 className="mt-2 font-display text-3xl font-semibold">Your first Pramana profile</h2>
+                  <h2 className="mt-2 font-display text-3xl font-normal">Your first Pramana profile</h2>
                 </div>
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10">
                   <Activity className="text-gold" />

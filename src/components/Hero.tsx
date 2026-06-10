@@ -50,11 +50,10 @@ const activity = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#071710] text-white">
+    <section className="premium-ambient premium-grain relative min-h-screen overflow-hidden text-white">
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_18%,rgba(201,168,76,0.22),transparent_26%),radial-gradient(circle_at_84%_12%,rgba(46,125,82,0.3),transparent_28%),radial-gradient(circle_at_50%_90%,rgba(184,92,56,0.18),transparent_34%),linear-gradient(135deg,#071710_0%,#0B2118_46%,#143726_100%)]" />
-        <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,.75)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.75)_1px,transparent_1px)] [background-size:54px_54px]" />
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#071710] to-transparent" />
+        <div className="premium-vignette absolute inset-0" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0d1210] to-transparent" />
       </div>
 
       <motion.div
@@ -90,7 +89,7 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="max-w-4xl font-display text-5xl font-semibold leading-[0.98] text-cream md:text-6xl lg:text-7xl text-balance">
+          <h1 className="max-w-4xl font-display text-5xl font-normal leading-[0.96] text-cream md:text-6xl lg:text-[5.6rem] text-balance">
             Validate before the market gets inside your body.
           </h1>
 
@@ -165,14 +164,14 @@ export default function Hero() {
             </div>
 
             <div className="mt-4 grid gap-4 xl:grid-cols-[1.08fr_0.92fr]">
-              <div className="relative min-h-[420px] overflow-hidden rounded-[1.8rem] border border-white/10 bg-forest-deep">
+            <div className="relative min-h-[420px] overflow-hidden rounded-[1.8rem] border border-white/10 bg-[#11120f]">
                 <img
                   src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1300&q=80"
                   alt="Beauty product being validated by Pramana AI"
                   className="absolute inset-0 h-full w-full object-cover opacity-42"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071710] via-forest/45 to-transparent" />
-                <div className="absolute inset-0 opacity-[0.16] [background-image:linear-gradient(rgba(247,232,181,.45)_1px,transparent_1px),linear-gradient(90deg,rgba(247,232,181,.45)_1px,transparent_1px)] [background-size:34px_34px]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0d1210] via-[#17131a]/48 to-transparent" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_52%,rgba(201,168,76,0.22),transparent_34%)]" />
 
                 <div className="absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -translate-y-1/2">
                   <motion.div
@@ -188,7 +187,7 @@ export default function Hero() {
                   <motion.div
                     animate={{ scale: [1, 1.06, 1] }}
                     transition={{ duration: 3.5, repeat: Infinity }}
-                    className="absolute left-1/2 top-1/2 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border border-gold/45 bg-forest/88 text-center shadow-glow backdrop-blur-xl"
+                    className="absolute left-1/2 top-1/2 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border border-gold/45 bg-[#17131a]/88 text-center shadow-glow backdrop-blur-xl"
                   >
                     <Brain className="text-gold" size={28} />
                     <span className="mt-2 text-xs font-bold uppercase text-white/70">

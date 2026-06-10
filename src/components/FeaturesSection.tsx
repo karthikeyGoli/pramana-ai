@@ -75,9 +75,8 @@ export default function FeaturesSection() {
   }
 
   return (
-    <section id="features" className="relative overflow-hidden bg-[#071710] py-24 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_18%,rgba(201,168,76,0.2),transparent_28%),radial-gradient(circle_at_86%_26%,rgba(46,125,82,0.22),transparent_30%),linear-gradient(180deg,#071710_0%,#0B2118_100%)]" />
-      <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,.75)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.75)_1px,transparent_1px)] [background-size:48px_48px]" />
+    <section id="features" className="premium-ambient-soft premium-grain relative overflow-hidden py-24 text-white">
+      <div className="premium-vignette absolute inset-0 opacity-80" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <motion.div
@@ -91,7 +90,7 @@ export default function FeaturesSection() {
               <Layers3 size={14} />
               This is all you need
             </span>
-            <h2 className="mt-5 max-w-3xl font-display text-4xl font-semibold leading-tight text-cream md:text-6xl text-balance">
+            <h2 className="mt-5 max-w-3xl font-display text-4xl font-normal leading-[1.02] text-cream md:text-6xl text-balance">
               One body intelligence layer for the products people actually use.
             </h2>
           </div>
@@ -214,7 +213,7 @@ export default function FeaturesSection() {
                   alt={activeDetails.headline}
                   className="absolute inset-0 h-full w-full object-cover opacity-50"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071710] via-forest/50 to-black/12" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0d1210] via-[#17131a]/55 to-black/12" />
                 <div className="absolute left-5 right-5 top-5 flex items-center justify-between gap-4">
                   <div className="inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 text-xs font-bold uppercase text-forest">
                     <MousePointer2 size={14} />
@@ -226,7 +225,7 @@ export default function FeaturesSection() {
                 </div>
 
                 <div className="absolute bottom-5 left-5 right-5">
-                  <h3 className="max-w-2xl font-display text-4xl font-semibold leading-tight text-white md:text-5xl text-balance">
+                  <h3 className="max-w-2xl font-display text-4xl font-normal leading-tight text-white md:text-5xl text-balance">
                     {activeDetails.headline}
                   </h3>
                   <p className="mt-4 max-w-2xl leading-relaxed text-white/70">
@@ -266,7 +265,7 @@ export default function FeaturesSection() {
               <span className="text-sm font-bold uppercase text-gold">
                 Backend-ready trust graph
               </span>
-              <h3 className="mt-3 font-display text-3xl font-semibold text-cream md:text-4xl">
+              <h3 className="mt-3 font-display text-3xl font-normal text-cream md:text-4xl">
                 Start light. Plug in real APIs when the keys arrive.
               </h3>
               <p className="mt-4 leading-relaxed text-white/66">
