@@ -104,47 +104,117 @@ export const painCards = [
 
 export const capabilityCards: {
   icon: LucideIcon
+  slug: string
   title: string
   text: string
   category: 'Beauty' | 'Fitness' | 'Nutrition' | 'Products' | 'Wellness' | 'Data'
 }[] = [
   {
     icon: ScanLine,
+    slug: 'product-scanner',
     title: 'Scan before you buy',
     text: 'Barcode, label, claim, and seller checks for beauty, supplements, hair care, and wellness products.',
     category: 'Products',
   },
   {
     icon: Camera,
+    slug: 'skin-context',
     title: 'Skin context, not skin panic',
     text: 'Selfie and routine inputs become informational signals, with confidence levels and dermatologist-safe wording.',
     category: 'Beauty',
   },
   {
     icon: Dumbbell,
+    slug: 'fitness-recovery',
     title: 'Gym, food, and skin together',
     text: 'Protein, sleep, stress, macros, and skin patterns are interpreted as one body system instead of separate dashboards.',
     category: 'Fitness',
   },
   {
     icon: Leaf,
+    slug: 'indian-wellness',
     title: 'Subtle Indian wellness lens',
     text: 'Light prakriti-inspired patterns for heat, dryness, digestion, stress, and rhythm. Ayurveda as context, not overclaiming.',
     category: 'Wellness',
   },
   {
     icon: Microscope,
+    slug: 'evidence-ai',
     title: 'Evidence-first AI',
     text: 'AI explains what verified data suggests. It does not invent safety claims from model memory.',
     category: 'Nutrition',
   },
   {
     icon: LockKeyhole,
+    slug: 'private-data',
     title: 'Privacy-aware by design',
     text: 'Start with consent, minimal data, clear deletion paths, and no selling sensitive beauty or wellness profiles.',
     category: 'Data',
   },
 ]
+
+export const moduleDetails = {
+  'product-scanner': {
+    eyebrow: 'Anti-fake scanner',
+    headline: 'A product proof room before checkout.',
+    summary:
+      'Barcode, label, seller, ingredient, claim, and user-context checks converge into one verdict. Built for beauty, supplements, hair care, and wellness products.',
+    image:
+      'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=80',
+    metrics: ['Claim delta', 'Batch proof', 'Seller risk', 'Body fit'],
+    steps: ['Scan product', 'Parse claims', 'Check sources', 'Return confidence'],
+  },
+  'skin-context': {
+    eyebrow: 'Beauty intelligence',
+    headline: 'Skin context without fear-based beauty panic.',
+    summary:
+      'Routine, sensitivity, breakouts, barrier signals, and product actives become a calmer validation layer for skin decisions.',
+    image:
+      'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1200&q=80',
+    metrics: ['Sensitivity', 'Barrier load', 'Active overlap', 'Routine risk'],
+    steps: ['Log skin context', 'Map actives', 'Flag overlap', 'Suggest safer next action'],
+  },
+  'fitness-recovery': {
+    eyebrow: 'Performance context',
+    headline: 'Protein, recovery, sleep, and skin finally talk.',
+    summary:
+      'Fitness goals are connected to sleep, stress, nutrition, supplement risk, and visible body signals instead of living in a separate app.',
+    image:
+      'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80',
+    metrics: ['Recovery', 'Protein fit', 'Stress load', 'Sleep debt'],
+    steps: ['Set goal', 'Connect routine', 'Scan supplement', 'Track pattern'],
+  },
+  'indian-wellness': {
+    eyebrow: 'Subtle Ayurveda',
+    headline: 'Indian wellness as context, not overclaim.',
+    summary:
+      'Pramana keeps modern safety as the base while letting heat, dryness, digestion, routine rhythm, and prakriti-inspired patterns enrich interpretation.',
+    image:
+      'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80',
+    metrics: ['Heat', 'Dryness', 'Digestion', 'Rhythm'],
+    steps: ['Capture preference', 'Map pattern', 'Respect evidence', 'Keep wording careful'],
+  },
+  'evidence-ai': {
+    eyebrow: 'Scientific layer',
+    headline: 'AI explains evidence. It does not invent proof.',
+    summary:
+      'Future scientific analysis will use retrieved sources, structured outputs, confidence, and non-diagnostic language instead of model-memory health claims.',
+    image:
+      'https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=1200&q=80',
+    metrics: ['Source quality', 'Evidence strength', 'Uncertainty', 'Safety wording'],
+    steps: ['Retrieve sources', 'Normalize evidence', 'Score confidence', 'Explain clearly'],
+  },
+  'private-data': {
+    eyebrow: 'Consent-first data',
+    headline: 'A private body graph that the user controls.',
+    summary:
+      'Minimal collection, explicit consent, server-side secrets, deletion/export paths, and no selling sensitive wellness profiles.',
+    image:
+      'https://images.unsplash.com/photo-1510017803434-a899398421b3?auto=format&fit=crop&w=1200&q=80',
+    metrics: ['Consent', 'RLS', 'Audit trail', 'Data minimization'],
+    steps: ['Ask clearly', 'Store minimally', 'Protect access', 'Let users delete'],
+  },
+} as const
 
 export const proofSignals = [
   { label: 'Ingredient databases', value: 'API-ready', icon: Microscope },

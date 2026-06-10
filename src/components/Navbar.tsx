@@ -43,6 +43,9 @@ export default function Navbar({ variant = 'light' }: { variant?: 'light' | 'dar
           <a href="#features" className={linkClass}>
             Intelligence
           </a>
+          <Link to="/modules/product-scanner" className={linkClass}>
+            Modules
+          </Link>
           <Link to="/auth" className={linkClass}>
             Login
           </Link>
@@ -79,6 +82,9 @@ export default function Navbar({ variant = 'light' }: { variant?: 'light' | 'dar
             <a href="#features" onClick={() => setOpen(false)} className="text-ink-muted">
               Intelligence
             </a>
+            <Link to="/modules/product-scanner" onClick={() => setOpen(false)} className="text-ink-muted">
+              Modules
+            </Link>
             <Link to="/auth" onClick={() => setOpen(false)} className="text-ink-muted">
               Login / signup
             </Link>

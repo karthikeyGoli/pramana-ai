@@ -4,6 +4,7 @@ import DashboardPage from './pages/DashboardPage'
 import PrivacyPage from './pages/PrivacyPage'
 import TermsPage from './pages/TermsPage'
 import AuthPage from './pages/AuthPage'
+import ModulePage from './pages/ModulePage'
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Route path="/privacy" element={<PrivacyPage />} />
       <Route path="/terms" element={<TermsPage />} />
       <Route path="/auth" element={<AuthPage />} />
+      <Route path="/modules/:slug" element={<ModulePage />} />
     </Routes>
   )
 }

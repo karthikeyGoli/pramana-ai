@@ -7,10 +7,13 @@ import FeaturesSection from '../components/FeaturesSection'
 import ValidationSandboxSection from '../components/ValidationSandboxSection'
 import WaitlistSection from '../components/WaitlistSection'
 import Footer from '../components/Footer'
+import PointerGlow from '../components/PointerGlow'
+import FloatingDock from '../components/FloatingDock'
 
 export default function LandingPage() {
   return (
     <>
+      <PointerGlow />
       <Navbar variant="dark" />
       <main>
         <Hero />
@@ -22,6 +25,7 @@ export default function LandingPage() {
         <WaitlistSection />
       </main>
       <Footer />
+      <FloatingDock />
     </>
   )
 }

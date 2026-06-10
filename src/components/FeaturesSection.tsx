@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { capabilityCards, imageTiles, proofSignals } from '../data/pramana'
+import SpotlightCard from './SpotlightCard'
 
 const categoryThemes = {
   All: {
@@ -147,32 +149,40 @@ export default function FeaturesSection() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className={`group rounded-[1.75rem] border bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-pramana ${
-                  activeCategory === 'All' ? 'border-stone-200' : activeTheme.border
-                }`}
               >
-                <div
-                  className={`mb-5 flex h-12 w-12 items-center justify-center rounded-2xl transition group-hover:scale-105 ${
-                    activeCategory === 'All'
-                      ? 'bg-pale text-forest'
-                      : `${activeTheme.soft} ${activeTheme.icon}`
+                <SpotlightCard
+                  className={`group h-full rounded-[1.75rem] border bg-white p-7 shadow-soft transition duration-200 hover:-translate-y-1 hover:shadow-pramana ${
+                    activeCategory === 'All' ? 'border-stone-200' : activeTheme.border
                   }`}
                 >
-                  <Icon size={22} />
-                </div>
-                <span
-                  className={`rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] ${
-                    activeCategory === 'All'
-                      ? 'bg-pale text-forest'
-                      : `${activeTheme.soft} ${activeTheme.icon}`
-                  }`}
-                >
-                  {benefit.category}
-                </span>
-                <h3 className="mt-4 font-display text-xl font-semibold text-ink">
-                  {benefit.title}
-                </h3>
-                <p className="mt-3 leading-relaxed text-ink-muted">{benefit.text}</p>
+                  <Link to={`/modules/${benefit.slug}`} className="block h-full">
+                    <div
+                      className={`mb-5 flex h-12 w-12 items-center justify-center rounded-2xl transition group-hover:scale-105 ${
+                        activeCategory === 'All'
+                          ? 'bg-pale text-forest'
+                          : `${activeTheme.soft} ${activeTheme.icon}`
+                      }`}
+                    >
+                      <Icon size={22} />
+                    </div>
+                    <span
+                      className={`rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] ${
+                        activeCategory === 'All'
+                          ? 'bg-pale text-forest'
+                          : `${activeTheme.soft} ${activeTheme.icon}`
+                      }`}
+                    >
+                      {benefit.category}
+                    </span>
+                    <h3 className="mt-4 font-display text-xl font-semibold text-ink">
+                      {benefit.title}
+                    </h3>
+                    <p className="mt-3 leading-relaxed text-ink-muted">{benefit.text}</p>
+                    <span className="mt-5 inline-flex text-sm font-bold text-forest">
+                      Open module
+                    </span>
+                  </Link>
+                </SpotlightCard>
               </motion.div>
             )
           })}
