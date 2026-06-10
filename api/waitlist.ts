@@ -9,10 +9,10 @@ import {
   readJsonBody,
   requireMethod,
   sendJson,
-} from '../src/server/apiUtils'
-import { enforceRateLimit } from '../src/server/rateLimit'
-import { getSupabaseAdmin } from '../src/server/supabaseAdmin'
-import { formatZodError, waitlistSchema } from '../src/server/schemas'
+} from '../src/server/apiUtils.js'
+import { enforceRateLimit } from '../src/server/rateLimit.js'
+import { getSupabaseAdmin } from '../src/server/supabaseAdmin.js'
+import { formatZodError, waitlistSchema } from '../src/server/schemas.js'
 
 export default async function handler(request: ApiRequest, response: ApiResponse) {
   const start = Date.now()

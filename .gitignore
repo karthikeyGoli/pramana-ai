@@ -46,3 +46,5 @@ server/storage
 .stylelintcache
 .node_repl_history
 .vscode-test
+
+.vercel

@@ -1,5 +1,5 @@
-import { applyCors, handleOptions, requireMethod, sendJson, type ApiRequest, type ApiResponse } from '../src/server/apiUtils'
-import { hasSupabaseServerConfig } from '../src/server/supabaseAdmin'
+import { applyCors, handleOptions, requireMethod, sendJson, type ApiRequest, type ApiResponse } from '../src/server/apiUtils.js'
+import { hasSupabaseServerConfig } from '../src/server/supabaseAdmin.js'
 
 export default function handler(request: ApiRequest, response: ApiResponse) {
   if (!applyCors(request, response)) return

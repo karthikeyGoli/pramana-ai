@@ -7,8 +7,8 @@ import {
   logApiEvent,
   requireMethod,
   sendJson,
-} from '../../src/server/apiUtils'
-import { getAdminEmails, getSupabaseAdmin, getSupabaseAuthClient } from '../../src/server/supabaseAdmin'
+} from '../../src/server/apiUtils.js'
+import { getAdminEmails, getSupabaseAdmin, getSupabaseAuthClient } from '../../src/server/supabaseAdmin.js'
 
 export default async function handler(request: ApiRequest, response: ApiResponse) {
   const start = Date.now()

@@ -1,4 +1,4 @@
-import { getClientIp, sendJson, type ApiRequest, type ApiResponse } from './apiUtils'
+import { getClientIp, sendJson, type ApiRequest, type ApiResponse } from './apiUtils.js'
 
 interface RateLimitOptions {
   name: string
